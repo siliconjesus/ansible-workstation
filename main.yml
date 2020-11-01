@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+
+  # vars_files:
+  #   - vars.yml
+
+  tasks: 
+    - name: install base packages
+      dnf:
+        name: ['vagrant', 'chromium', 'vim-enhanced', 'akmod-nvidia', 'obs-studio', 'openssh-server', 'vlc', 'git', 'discord']
+        state: latest
+        update_cache: True
+    - name: enable sshd
+      service: name=sshd state=started enabled=yes
