@@ -11,6 +11,9 @@
         name: ['vagrant', 'chromium', 'vim-enhanced', 'akmod-nvidia', 'obs-studio', 'openssh-server', 'vlc', 'git', 'discord', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'terminology', 'flatpak', 'podman', 'mplayer', 'gvim']
         state: latest
         update_cache: True
+
+#  sudo dnf group install -y "GNOME Desktop Environment" "KDE (K Desktop Environment)" "RPM Development Tools" "Security Lab" "Games and Entertainment" "Compiz"
+
     - name: enable sshd
       service: name=sshd state=started enabled=yes
 
