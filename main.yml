@@ -15,7 +15,7 @@
       service: name=sshd state=started enabled=yes
 
     - name: Install the spotify flatpak
+      become: no
       community.general.flatpak:
         name:  https://dl.flathub.org/repo/appstream/com.spotify.Client.flatpakref
         state: present
-        become: no
