@@ -5,13 +5,17 @@
   # vars_files:
   #   - vars.yml
 
+# install rpmfusion from http 
+
   tasks: 
     - name: install base packages
       dnf:
-        name: ['vagrant', 'chromium', 'vim-enhanced', 'akmod-nvidia', 'obs-studio', 'openssh-server', 'vlc', 'git', 'discord', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'terminology', 'flatpak', 'podman', 'mplayer', 'gvim', 'gnome-tweaks']
+        name: ['vagrant', 'chromium', 'vim-enhanced', 'akmod-nvidia', 'obs-studio', 'openssh-server', 'vlc', 'git', 'discord', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'terminology', 'flatpak', 'podman', 'mplayer', 'gvim', 'gnome-tweaks', arduino]
         state: latest
         update_cache: True
 
+    # - name: Grab rcfiles repo and deploy
+    #   git: 
 #  sudo dnf group install -y "GNOME Desktop Environment" "KDE (K Desktop Environment)" "RPM Development Tools" "Security Lab" "Games and Entertainment" "Compiz"
 
     - name: enable sshd
