@@ -1,0 +1,6 @@
+---
+- name: Install Desktop packages
+  dnf:
+    name: [ 'chromium', 'vim-enhanced', 'akmod-nvidia', 'vlc', 'terminology', 'flatpak', 'mplayer', 'gvim', 'gnome-tweaks' ]
+    state: latest
+    update_cache: true

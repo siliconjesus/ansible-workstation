@@ -7,10 +7,13 @@
 
 # install rpmfusion from http 
 
+  roles: 
+    - desktop
+
   tasks: 
     - name: install base packages
       dnf:
-        name: ['vagrant', 'chromium', 'vim-enhanced', 'akmod-nvidia', 'obs-studio', 'openssh-server', 'vlc', 'git', 'discord', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'terminology', 'flatpak', 'podman', 'mplayer', 'gvim', 'gnome-tweaks', arduino]
+        name: ['vagrant',  'obs-studio', 'openssh-server',  'git', 'discord', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'podman', arduino]
         state: latest
         update_cache: True
 
