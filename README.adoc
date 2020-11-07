@@ -1,0 +1,11 @@
+= README
+
+== About:
+
+This is my first real deep dive into Ansible roles and how to manage my own personal workstation.  Feel free to fork this and to commit back to the project.  Right now I'm targetting Fedora Core 33, but I plan on keeping it semi-updated relative to most recent Linux Operating systems.  This builds my main workstation.
+
+# TODO #
+
+- Build the ability to add additional 3rd party repos
+- Build molecule testing
+- Cross build to Ubuntu 20(?)
