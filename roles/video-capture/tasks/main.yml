@@ -1,0 +1,6 @@
+---
+- name: Install video-capture packages
+  dnf:
+    name: [ 'obs-studio' ]
+    state: latest
+    update_cache: true
