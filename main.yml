@@ -8,7 +8,8 @@
   tasks: 
     - name: install base packages
       dnf:
-        name: ['vagrant', 'chromium', 'vim-enhanced', 'akmod-nvidia', 'obs-studio', 'openssh-server', 'vlc', 'git', 'discord', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'terminology', 'flatpak', 'podman', 'mplayer', 'gvim']        state: latest
+        name: ['vagrant', 'chromium', 'vim-enhanced', 'akmod-nvidia', 'obs-studio', 'openssh-server', 'vlc', 'git', 'discord', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'terminology', 'flatpak', 'podman', 'mplayer', 'gvim']
+        state: latest
         update_cache: True
     - name: enable sshd
       service: name=sshd state=started enabled=yes
