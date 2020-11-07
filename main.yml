@@ -5,21 +5,21 @@
   # vars_files:
   #   - vars.yml
 
-# install rpmfusion from http 
+# install rpmfusion from http
 
-  roles: 
+  roles:
     - desktop
     - video-capture
 
-  tasks: 
+  tasks:
     - name: install base packages
       dnf:
-        name: ['vagrant', 'openssh-server', 'git', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'podman', 'arduino', 'nv-codec-headers']
+        name: ['vagrant', 'openssh-server', 'git', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'podman', 'arduino', 'nv-codec-headers', 'yamllint' ]
         state: latest
-        update_cache: True
+        update_cache: true
 
     # - name: Grab rcfiles repo and deploy
-    #   git: 
+    #   git:
 #  sudo dnf group install -y "GNOME Desktop Environment" "KDE (K Desktop Environment)" "RPM Development Tools" "Security Lab" "Games and Entertainment" "Compiz"
 
     - name: enable sshd
@@ -28,5 +28,6 @@
     - name: Install the spotify flatpak
       become: no
       community.general.flatpak:
-        name:  https://dl.flathub.org/repo/appstream/com.spotify.Client.flatpakref
+        name: https://dl.flathub.org/repo/appstream/com.spotify.Client.flatpakref
         state: present
+        
