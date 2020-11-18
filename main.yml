@@ -14,7 +14,7 @@
   tasks:
     - name: install base packages
       dnf:
-        name: ['vagrant', 'openssh-server', 'git', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'podman', 'arduino', 'nv-codec-headers', 'yamllint' ]
+        name: ['vagrant', 'openssh-server', 'git', 'golang', 'x265', 'openh264', 'ffmpeg', 'neofetch', 'gimp', 'podman', 'arduino', 'nv-codec-headers', 'yamllint' ]
         state: latest
         update_cache: true
 
